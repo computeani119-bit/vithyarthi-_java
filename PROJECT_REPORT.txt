@@ -1,0 +1,99 @@
+================================================================================
+                    VITYARTHI FLIPPED COURSE EVALUATION
+                    PROJECT SUBMISSION & TECHNICAL REPORT
+================================================================================
+
+PROJECT TITLE  : Student Management & Grade Analysis System
+LANGUAGE       : Java (JDK 26 / SE standard runtime compatible)
+AUTHOR / USER  : Vityarthi Course Participant
+REPOSITORY     : https://github.com/computeani119-bit/vithyarthi-_java
+
+--------------------------------------------------------------------------------
+1. EXECUTIVE SUMMARY & PROBLEM STATEMENT
+--------------------------------------------------------------------------------
+Educational institutions require robust software tools to manage student enrollment,
+track academic records, compute Cumulative Grade Point Averages (CGPA), and evaluate
+departmental performance.
+
+This project implements a complete, end-to-end Java desktop application that meets
+all evaluation criteria of the Vityarthi Flipped Course. It bridges object-oriented
+software architecture, persistent storage (CSV File I/O), desktop GUI visualization 
+(Swing & Graphics2D), and command-line execution modes.
+
+--------------------------------------------------------------------------------
+2. SYSTEM ARCHITECTURE & OBJECT-ORIENTED DESIGN (OOP)
+--------------------------------------------------------------------------------
+The application is structured into modular packages under `com.vityarthi.sms`:
+
+[A] ENCAPSULATION & DATA VALIDATION
+    - All domain models maintain private fields with accessors/mutators.
+    - Input parameters (Roll number, Email format, Name, CGPA range 0.0 - 10.0)
+      are strictly validated via `ValidationUtils` before object construction.
+
+[B] INHERITANCE & ABSTRACTION
+    - `Person` (Abstract Class): Base entity holding ID, Name, and Email.
+    - `Student` (Subclass): Extends `Person` to represent undergraduate students,
+      adding Roll Number, Department, Academic Year, CGPA, and course grades list.
+    - `GraduateStudent` (Subclass): Extends `Student` to represent postgraduate
+      students with research topic and faculty advisor attributes.
+    - `StorageService` (Interface): Abstraction layer separating service logic 
+      from storage implementation (`FileStorageService`).
+
+[C] POLYMORPHISM & METHOD OVERRIDING
+    - Method `getAcademicStanding()` is overridden in `GraduateStudent` to apply
+      stricter academic evaluation standards appropriate for postgraduates.
+    - Method `getRoleTitle()` dynamically returns the student classification.
+
+[D] EXCEPTION HANDLING
+    - Custom checked exceptions (`InvalidDataException`, `StudentNotFoundException`)
+      ensure graceful error propagation and user-friendly error dialogs.
+
+--------------------------------------------------------------------------------
+3. FUNCTIONAL CAPABILITIES
+--------------------------------------------------------------------------------
+1. Student Record Management (CRUD):
+   - Add new undergraduate or postgraduate students.
+   - Edit existing student attributes with validation.
+   - Search records in real-time by Name, Roll Number, or Department.
+   - Delete records with confirmation alerts.
+
+2. Grade Analytics & Statistical Reporting:
+   - Calculates Class Average CGPA, Highest CGPA, and Lowest CGPA.
+   - Categorizes CGPA into 5 grade distribution buckets:
+     * 9.0 - 10.0 (Outstanding / Distinction)
+     * 8.0 - 8.9  (First Class)
+     * 7.0 - 7.9  (Second Class)
+     * 6.0 - 6.9  (Average)
+     * < 6.0      (Needs Improvement / Warning)
+   - Computes department-wise averages and pass rates.
+
+3. Visualization & User Interface:
+   - Swing Desktop GUI with clean JTable display, action buttons, and status bar.
+   - Custom `Graphics2D` canvas rendering a color-coded Bar Chart of grade distribution.
+   - Command Line Interface (`ConsoleUI`) with interactive menus.
+
+4. Data Persistence & Export:
+   - Automatically loads and saves data to `data/students.csv`.
+   - Exports formatted summary reports to `.txt` files (`DataExporter`).
+
+--------------------------------------------------------------------------------
+4. TEST RESULTS & SAMPLE DATASET SUMMARY
+--------------------------------------------------------------------------------
+Dataset Size              : 6 Initial Enrolled Records
+Overall Class Average CGPA: 8.50
+Highest CGPA              : 9.65 (Dr. Kavita Joshi - Data Science)
+Lowest CGPA               : 6.40 (Devansh Patel - Mechanical)
+
+Grade Breakdown:
+  - 9.0 - 10.0 : 3 Students
+  - 8.0 - 8.9  : 1 Student
+  - 7.0 - 7.9  : 1 Student
+  - 6.0 - 6.9  : 1 Student
+
+--------------------------------------------------------------------------------
+5. CONCLUSION
+--------------------------------------------------------------------------------
+The Student Management & Grade Analysis System fulfills the academic requirements
+of the Vityarthi Flipped Course. It showcases professional Java design patterns,
+fault-tolerant data handling, dual-mode interfaces, and graphical analytical tools.
+================================================================================
