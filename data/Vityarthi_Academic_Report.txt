@@ -1,0 +1,26 @@
+=========================================================
+         VITYARTHI STUDENT ACADEMIC REPORT               
+=========================================================
+Generated On: 2026-09-17 23:35:08
+Total Enrolled Students: 6
+Overall Class Average CGPA: 8.50
+Highest CGPA: 9.65 | Lowest CGPA: 6.40
+
+--- GRADE DISTRIBUTION SUMMARY ---
+  * 9.0 - 10.0      : 3 students
+  * 7.0 - 7.9       : 1 students
+  * 6.0 - 6.9       : 1 students
+  * 8.0 - 8.9       : 1 students
+  * < 6.0           : 0 students
+
+--- STUDENT ACADEMIC RECORDS ---
+ROLL NO      | NAME                   | DEPARTMENT   | CGPA   | ACADEMIC STANDING   
+----------------------------------------------------------------------------------
+21BCE0101    | Aarav Sharma           | Computer ... | 9.42   | First Class with Distinction
+21BCE0105    | Ananya Verma           | Computer ... | 8.85   | First Class         
+21BIT0204    | Rohan Mehta            | Informati... | 7.60   | Second Class        
+22ECE0310    | Priya Nair             | Electroni... | 9.10   | First Class with Distinction
+22MEC0412    | Devansh Patel          | Mechanical   | 6.40   | Pass                
+20MSC0501    | Dr. Kavita Joshi       | Data Science | 9.65   | High Honors (Postgraduate)
+=========================================================
+End of Report.

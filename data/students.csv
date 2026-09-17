@@ -1,0 +1,7 @@
+Type,ID,Name,Email,RollNumber,Department,AcademicYear,CGPA,ResearchTopic,AdvisorName
+UG,STU101,Aarav Sharma,aarav.sharma@vityarthi.edu,21BCE0101,Computer Science,3,9.42,,
+UG,STU102,Ananya Verma,ananya.verma@vityarthi.edu,21BCE0105,Computer Science,3,8.85,,
+UG,STU103,Rohan Mehta,rohan.mehta@vityarthi.edu,21BIT0204,Information Technology,3,7.60,,
+UG,STU104,Priya Nair,priya.nair@vityarthi.edu,22ECE0310,Electronics & Comm,2,9.10,,
+UG,STU105,Devansh Patel,devansh.patel@vityarthi.edu,22MEC0412,Mechanical,2,6.40,,
+GRADUATE,PG101,Dr. Kavita Joshi,kavita.j@vityarthi.edu,20MSC0501,Data Science,4,9.65,Deep Learning for Genomic Sequences,Dr. R. Ramanujan
